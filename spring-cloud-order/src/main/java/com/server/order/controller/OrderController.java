@@ -7,6 +7,7 @@ import com.server.order.service.OrderService;
 import com.server.order.vo.OrderVo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -18,6 +19,7 @@ public class OrderController {
     private OrderService orderService ;
     @Autowired
     private RestTemplate restTemplate ;
+
 
     @GetMapping(value = "/findOrderByOrderId")
     public OrderVo findOrderByOrderId(@RequestParam Long orderId) {

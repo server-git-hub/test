@@ -10,9 +10,13 @@ spring:
     username: root
     password: 123456
   cloud:
+    loadbalancer:
+      nacos:
+        enabled: true
     nacos:
       discovery:
         server-addr: localhost:8848
+        cluster-name: sh
   application:
     name: spring-cloud-user
 # 配置mybatis的相关信息
