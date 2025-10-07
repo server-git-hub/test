@@ -9,6 +9,12 @@ spring:
     url: jdbc:mysql://localhost:3306/spzx-cloud-order?characterEncoding=UTF8
     username: root
     password: 123456
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  application:
+    name: spring-cloud-order
 
 # 配置mybatis的相关信息
 mybatis:

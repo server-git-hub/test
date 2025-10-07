@@ -24,7 +24,7 @@ public class OrderController {
         Order order = orderService.findOrderByOrderId(orderId);
         OrderVo orderVo = new OrderVo();
         BeanUtils.copyProperties(order, orderVo);
-        User user = restTemplate.getForObject("http://localhost:8080/api/user/findUserByUserId?id={id}", User.class,order.getUserId());
+        User user = restTemplate.getForObject("http://spring-cloud-user:8080/api/user/findUserByUserId?id={id}", User.class,order.getUserId());
         orderVo.setUser(user);
         return orderVo;
     }
